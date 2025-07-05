@@ -1,0 +1,13 @@
+CRITICAL - 2025-07-03 15:36:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "receipt.php"
+[Method: POST, Route: order/process]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('receipt.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('receipt', [], true)
+ 3 APPPATH\Controllers\Home.php(50): view('receipt', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->processOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
