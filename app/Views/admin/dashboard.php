@@ -70,10 +70,6 @@
                                         <option <?= $o['status'] == 'Diproses' ? 'selected' : '' ?>>Diproses</option>
                                         <option <?= $o['status'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
                                     </select>
-                                    <form action="<?= base_url('/admin/delete-order') ?>" method="post" onsubmit="return confirm('Yakin ingin hapus?')">
-    <input type="hidden" name="id" value="<?= $o['id'] ?>">
-    <button type="submit">🗑️ Hapus</button>
-</form>
                                 </form>
                             </td>
                             <td>

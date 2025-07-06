@@ -1,9 +1,10 @@
 /vendor/
-/node_modules/
+/writable/cache/
+/writable/logs/
+/writable/session/
 /.env
+.env.*
 *.log
-*.tmp
-.DS_Store
 .idea/
 .vscode/
 *.bak
