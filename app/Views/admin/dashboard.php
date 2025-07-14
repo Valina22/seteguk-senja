@@ -35,6 +35,11 @@
 
         <!-- Tabel Pesanan -->
         <div class="table-container">
+            <?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+<?php elseif (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+<?php endif; ?>
             <table class="table">
                 <thead>
                     <tr>
@@ -79,9 +84,14 @@
                                     <span>-</span>
                                 <?php endif; ?>
                             </td>
-                            <td>
-                                <a class="btn btn-print" href="<?= base_url('/admin/cetak/' . $o['id']) ?>" target="_blank">🧾 Cetak</a>
-                            </td>
+                            <td style="display:flex; gap:5px;">
+    <a class="btn btn-print" href="<?= base_url('/admin/cetak/' . $o['id']) ?>" target="_blank">🧾 Cetak</a>
+
+    <form action="<?= base_url('/order/delete/' . $o['id']) ?>" method="post" onsubmit="return confirm('Yakin ingin menghapus pesanan ini?');">
+        <?= csrf_field() ?>
+        <button type="submit" class="btn btn-delete">🗑️ Hapus</button>
+    </form>
+</td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

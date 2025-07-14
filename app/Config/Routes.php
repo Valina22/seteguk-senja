@@ -18,3 +18,7 @@ $routes->get('/admin/logout', 'AdminController::logout');
 $routes->post('/admin/update-status', 'AdminController::updateStatus');
 $routes->get('/admin/export-excel', 'AdminController::exportExcel');
 $routes->get('/admin/cetak/(:num)', 'AdminController::cetakInvoice/$1');
+$routes->get('/email-test', 'EmailTestController::index');
+$routes->post('/order/delete/(:num)', 'OrderController::delete/$1');
+$routes->post('/admin/order/delete/(:num)', 'OrderController::delete/$1');
+

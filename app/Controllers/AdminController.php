@@ -22,15 +22,17 @@ class AdminController extends BaseController
     $adminModel = new AdminModel();
     $admin = $adminModel->where('username', $username)->first();
 
-    // kode di bawah tidak akan jalan karena dd() di atas sudah stop
     if ($admin && password_verify($password, $admin['password'])) {
     session()->set([
         'admin_logged_in' => true,
         'admin_username'  => $admin['username'],
         'admin_role'      => $admin['role']
     ]);
-    return redirect()->to('/admin/dashboard');
-    }
+
+    // Uji manual tanpa redirect
+return redirect()->to('/admin/dashboard');
+}
+
 }
 
     public function updateStatus()
@@ -58,7 +60,7 @@ class AdminController extends BaseController
         }
     }
 
-    return redirect()->to('/admin/dashboard');
+return view('emails/order_success', ['order' => $order]);
 }
 
     public function dashboard()
@@ -82,10 +84,16 @@ class AdminController extends BaseController
                              ->paginate($perPage);
     }
 
-    // Tambahan perhitungan statistik
+    // Cek koneksi database untuk menghindari MySQL server has gone away
+    $db = \Config\Database::connect();
+    if (! $db->connID || ! mysqli_ping($db->connID)) {
+        $db->initialize();
+    }
+
+    // Perhitungan statistik (pakai clone model agar tidak bentrok kondisi)
     $totalIncome = $orderModel->selectSum('total_harga')->get()->getRow()->total_harga ?? 0;
-    $successCount = $orderModel->where('status', 'Selesai')->countAllResults();
-    $failedCount = $orderModel->where('status !=', 'Selesai')->countAllResults();
+    $successCount = (clone $orderModel)->where('status', 'Selesai')->countAllResults();
+    $failedCount  = (clone $orderModel)->where('status !=', 'Selesai')->countAllResults();
 
     return view('admin/dashboard', [
         'orders' => $orders,

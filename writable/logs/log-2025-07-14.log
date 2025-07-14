@@ -1,0 +1,525 @@
+DEBUG - 2025-07-14 06:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 06:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 06:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 06:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 06:58:29 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\Seteguk_Senja\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Seteguk_Senja\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Seteguk_Senja\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\Seteguk_Senja\system\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\Seteguk_Senja\app\Controllers\AdminController.php(82): CodeIgniter\BaseModel->paginate(10)
+#7 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(933): App\Controllers\AdminController->dashboard()
+#8 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Seteguk_Senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Seteguk_Senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-14 06:58:29 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`', [], false)
+ 2 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\AdminController.php(82): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
+CRITICAL - 2025-07-14 06:58:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `orders`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `orders`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`', [], false)
+ 4 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\AdminController.php(82): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
+CRITICAL - 2025-07-14 06:58:29 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `orders`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `orders`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`', [], false)
+ 5 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AdminController.php(82): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
+DEBUG - 2025-07-14 06:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 06:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 06:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-14 07:07:08 --> ErrorException: Maximum execution time of 60 seconds exceeded
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 328.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-14 07:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:07:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Seteguk_Senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Seteguk_Senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Seteguk_Senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Seteguk_Senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Seteguk_Senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Seteguk_Senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Seteguk_Senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Seteguk_Senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Seteguk_Senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Seteguk_Senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Seteguk_Senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Seteguk_Senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\Seteguk_Senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Seteguk_Senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Seteguk_Senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Seteguk_Senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 07:07:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
+DEBUG - 2025-07-14 07:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-14 07:11:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "emails/order_success.php"
+[Method: POST, Route: admin/update-status]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('emails/order_success.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('emails/order_success', [], true)
+ 3 APPPATH\Controllers\AdminController.php(55): view('emails/order_success', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Seteguk_Senja\\public\\index.php')
+ERROR - 2025-07-14 07:15:25 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:15:25 --> 220 smtp.gmail.com ESMTP d9443c01a7336-23de4285ed6sm86826745ad.25 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de4285ed6sm86826745ad.25 - gsmtp
+
+ERROR - 2025-07-14 07:15:25 --> Gagal mengirim email ke valinapuspitasari538@gmail.com
+DEBUG - 2025-07-14 07:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:32:32 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:32:32 --> 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9dd7341sm9996388b3a.15 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9dd7341sm9996388b3a.15 - gsmtp
+
+DEBUG - 2025-07-14 07:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:32:51 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:32:51 --> 220 smtp.gmail.com ESMTP 98e67ed59e1d1-31c3eb46574sm9970248a91.27 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-31c3eb46574sm9970248a91.27 - gsmtp
+
+ERROR - 2025-07-14 07:32:51 --> Gagal mengirim email ke hygirlxv@gmail.com
+DEBUG - 2025-07-14 07:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:34:34 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:34:34 --> 220 smtp.gmail.com ESMTP d9443c01a7336-23de427ec91sm87298325ad.35 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de427ec91sm87298325ad.35 - gsmtp
+
+ERROR - 2025-07-14 07:34:34 --> Gagal mengirim email ke hygirlxv@gmail.com
+DEBUG - 2025-07-14 07:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 07:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:35:33 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:35:33 --> 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9f8b954sm9656687b3a.151 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9f8b954sm9656687b3a.151 - gsmtp
+
+DEBUG - 2025-07-14 07:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 07:35:46 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 07:35:46 --> 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9dd71ffsm9982608b3a.23 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9dd71ffsm9982608b3a.23 - gsmtp
+
+ERROR - 2025-07-14 07:35:46 --> Gagal mengirim email ke valina.puspita@sman1tuntang.sch.id
+ERROR - 2025-07-14 08:33:12 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 08:33:12 --> 220 smtp.gmail.com ESMTP 41be03b00d2f7-b3bbe6bd903sm9726269a12.49 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b3bbe6bd903sm9726269a12.49 - gsmtp
+
+ERROR - 2025-07-14 08:33:12 --> ❌ Gagal mengirim email: 220 smtp.gmail.com ESMTP 41be03b00d2f7-b3bbe6bd903sm9726269a12.49 - gsmtp
+<br><pre>hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+</pre>Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b3bbe6bd903sm9726269a12.49 - gsmtp
+<br>Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Mon, 14 Jul 2025 08:33:10 +0000
+To: valina.puspita@sman1tuntang.sch.id
+Cc: admin@seteguksenja.com
+Subject: =?UTF-8?Q?Konfirmasi=20Pesanan=20#ORD-008=20=E2=80=93=20Seteguk=20Senja?=
+From: &quot;Seteguk Senja Coffee Shop&quot; &lt;seteguksenja@gmail.com&gt;
+Return-Path: &lt;seteguksenja@gmail.com&gt;
+Reply-To: &lt;seteguksenja@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: seteguksenja@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6874c0c68efde1.76939090@gmail.com&gt;
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6874c0c68f0d68.69564291&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_6874c0c68f0d68.69564291
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Terima Kasih Telah Memesan di Seteguk Senja!
+Nomor Pesanan: ORD-008
+Menu: latte
+Ukuran: small
+Jumlah: 1
+Harga Satuan: Rp25.000
+Total Harga: Rp25.000
+Deskripsi: Latte Senja – Pilihan sempurna untuk menikmati suasana senja.
+Catatan: -
+Pembayaran: Cash
+
+📍 Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran
+sesuai metode yang dipilih.
+
+
+--B_ALT_6874c0c68f0d68.69564291
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+&lt;!-- DEBUG-VIEW START 1 APPPATH\Views\order\email_template.php --&gt;=0A&lt;h2&gt;Te=
+rima Kasih Telah Memesan di Seteguk Senja!&lt;/h2&gt;=0A&lt;p&gt;&lt;strong&gt;Nomor Pesanan:=
+&lt;/strong&gt; ORD-008&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Menu:&lt;/strong&gt; latte&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Uk=
+uran:&lt;/strong&gt; small&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Jumlah:&lt;/strong&gt; 1&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;H=
+arga Satuan:&lt;/strong&gt; Rp25.000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Total Harga:&lt;/strong&gt; Rp25.=
+000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Deskripsi:&lt;/strong&gt; Latte Senja =E2=80=93 Pilihan semp=
+urna untuk menikmati suasana senja.&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; -&lt;/p=
+&gt;=0A&lt;p&gt;&lt;strong&gt;Pembayaran:&lt;/strong&gt; Cash&lt;/p&gt;=0A&lt;hr&gt;=0A&lt;p&gt;=F0=9F=93=8D Silak=
+an ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran sesuai m=
+etode yang dipilih.&lt;/p&gt;=0A=0A&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\Views\order\em=
+ail_template.php --&gt;
+
+--B_ALT_6874c0c68f0d68.69564291--</pre>
+ERROR - 2025-07-14 08:38:43 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 08:38:43 --> 220 smtp.gmail.com ESMTP d9443c01a7336-23de4343e48sm87903685ad.190 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de4343e48sm87903685ad.190 - gsmtp
+
+ERROR - 2025-07-14 08:38:43 --> ❌ Gagal mengirim email: 220 smtp.gmail.com ESMTP d9443c01a7336-23de4343e48sm87903685ad.190 - gsmtp
+<br><pre>hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+</pre>Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de4343e48sm87903685ad.190 - gsmtp
+<br>Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Mon, 14 Jul 2025 08:38:40 +0000
+To: hygirlxv@gmail.com
+Cc: admin@seteguksenja.com
+Subject: =?UTF-8?Q?Konfirmasi=20Pesanan=20#ORD-009=20=E2=80=93=20Seteguk=20Senja?=
+From: &quot;Seteguk Senja Coffee Shop&quot; &lt;seteguksenja@gmail.com&gt;
+Return-Path: &lt;seteguksenja@gmail.com&gt;
+Reply-To: &lt;seteguksenja@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: seteguksenja@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6874c210a28e38.33523915@gmail.com&gt;
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6874c210a29012.20865341&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_6874c210a29012.20865341
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Terima Kasih Telah Memesan di Seteguk Senja!
+Nomor Pesanan: ORD-009
+Menu: aren
+Ukuran: small
+Jumlah: 1
+Harga Satuan: Rp24.000
+Total Harga: Rp24.000
+Deskripsi: Kopi Aren Rintik Senja – Rasa lokal dalam kehangatan romantis.
+Catatan: -
+Pembayaran: Shopeepay
+
+📍 Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran
+sesuai metode yang dipilih.
+
+
+--B_ALT_6874c210a29012.20865341
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+&lt;!-- DEBUG-VIEW START 1 APPPATH\Views\order\email_template.php --&gt;=0A&lt;h2&gt;Te=
+rima Kasih Telah Memesan di Seteguk Senja!&lt;/h2&gt;=0A&lt;p&gt;&lt;strong&gt;Nomor Pesanan:=
+&lt;/strong&gt; ORD-009&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Menu:&lt;/strong&gt; aren&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Uku=
+ran:&lt;/strong&gt; small&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Jumlah:&lt;/strong&gt; 1&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Ha=
+rga Satuan:&lt;/strong&gt; Rp24.000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Total Harga:&lt;/strong&gt; Rp24.0=
+00&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Deskripsi:&lt;/strong&gt; Kopi Aren Rintik Senja =E2=80=93 Ra=
+sa lokal dalam kehangatan romantis.&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; -&lt;/p=
+&gt;=0A&lt;p&gt;&lt;strong&gt;Pembayaran:&lt;/strong&gt; Shopeepay&lt;/p&gt;=0A&lt;hr&gt;=0A&lt;p&gt;=F0=9F=93=
+=8D Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran=
+ sesuai metode yang dipilih.&lt;/p&gt;=0A=0A&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\Views=
+\order\email_template.php --&gt;
+
+--B_ALT_6874c210a29012.20865341--</pre>
+ERROR - 2025-07-14 08:39:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 08:39:16 --> 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9f4cb57sm10255030b3a.136 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9f4cb57sm10255030b3a.136 - gsmtp
+
+ERROR - 2025-07-14 08:39:16 --> ❌ Gagal mengirim email: 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9f4cb57sm10255030b3a.136 - gsmtp
+<br><pre>hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:7423:fa3a:2907:7565]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+</pre>Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9f4cb57sm10255030b3a.136 - gsmtp
+<br>Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Mon, 14 Jul 2025 08:39:13 +0000
+To: valina.puspita@sman1tuntang.sch.id
+Cc: admin@seteguksenja.com
+Subject: =?UTF-8?Q?Konfirmasi=20Pesanan=20#ORD-010=20=E2=80=93=20Seteguk=20Senja?=
+From: &quot;Seteguk Senja Coffee Shop&quot; &lt;seteguksenja@gmail.com&gt;
+Return-Path: &lt;seteguksenja@gmail.com&gt;
+Reply-To: &lt;seteguksenja@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: seteguksenja@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6874c231c22901.74457171@gmail.com&gt;
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6874c231c22c28.36405592&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_6874c231c22c28.36405592
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Terima Kasih Telah Memesan di Seteguk Senja!
+Nomor Pesanan: ORD-010
+Menu: donat
+Ukuran: small
+Jumlah: 1
+Harga Satuan: Rp19.000
+Total Harga: Rp19.000
+Deskripsi: Donat Kopi Rembulan – Gurih manis kopi malam hari.
+Catatan: -
+Pembayaran: Qris
+
+📍 Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran
+sesuai metode yang dipilih.
+
+
+--B_ALT_6874c231c22c28.36405592
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+&lt;!-- DEBUG-VIEW START 1 APPPATH\Views\order\email_template.php --&gt;=0A&lt;h2&gt;Te=
+rima Kasih Telah Memesan di Seteguk Senja!&lt;/h2&gt;=0A&lt;p&gt;&lt;strong&gt;Nomor Pesanan:=
+&lt;/strong&gt; ORD-010&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Menu:&lt;/strong&gt; donat&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Uk=
+uran:&lt;/strong&gt; small&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Jumlah:&lt;/strong&gt; 1&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;H=
+arga Satuan:&lt;/strong&gt; Rp19.000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Total Harga:&lt;/strong&gt; Rp19.=
+000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Deskripsi:&lt;/strong&gt; Donat Kopi Rembulan =E2=80=93 Guri=
+h manis kopi malam hari.&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; -&lt;/p&gt;=0A&lt;p&gt;&lt;str=
+ong&gt;Pembayaran:&lt;/strong&gt; Qris&lt;/p&gt;=0A&lt;hr&gt;=0A&lt;p&gt;=F0=9F=93=8D Silakan ambil pe=
+sanan Anda di kedai kami atau ikuti petunjuk pembayaran sesuai metode yang =
+dipilih.&lt;/p&gt;=0A=0A&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\Views\order\email_templat=
+e.php --&gt;
+
+--B_ALT_6874c231c22c28.36405592--</pre>
+DEBUG - 2025-07-14 08:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 08:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

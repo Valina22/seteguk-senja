@@ -38,7 +38,7 @@ class Email extends BaseConfig
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'password-atau-app-password';
+    public string $SMTPPass = 'pyidbmrfpucgrdsv';
 
     /**
      * SMTP Port
