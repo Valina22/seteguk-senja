@@ -523,3 +523,836 @@ DEBUG - 2025-07-14 08:52:19 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-07-14 08:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-07-14 08:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-07-14 08:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 13:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-14 13:59:27 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 13:59:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+ERROR - 2025-07-14 13:59:56 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 13:59:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+ERROR - 2025-07-14 14:06:28 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:06:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+ERROR - 2025-07-14 14:11:23 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:11:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+ERROR - 2025-07-14 14:19:56 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:19:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+ERROR - 2025-07-14 14:21:26 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:21:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+DEBUG - 2025-07-14 14:22:33 --> ✅ Database config loaded: db
+ERROR - 2025-07-14 14:22:36 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:22:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+DEBUG - 2025-07-14 14:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 14:22:59 --> ✅ Database config loaded: db
+ERROR - 2025-07-14 14:23:01 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:23:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+DEBUG - 2025-07-14 14:23:48 --> ✅ Database config loaded: db
+ERROR - 2025-07-14 14:23:51 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:23:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+DEBUG - 2025-07-14 14:24:31 --> ✅ Database config loaded: db
+ERROR - 2025-07-14 14:24:34 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 201)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('db', 'user', Object(SensitiveParameterValue), 'seteguk_senja', 3306, '', 0)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for db failed: No such host is known.  in C:\xampp\htdocs\seteguk-senja\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\seteguk-senja\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\seteguk-senja\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\seteguk-senja\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\seteguk-senja\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\seteguk-senja\app\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+#7 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\seteguk-senja\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\seteguk-senja\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\seteguk-senja\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\seteguk-senja\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\seteguk-senja\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-14 14:24:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for db failed: No such host is known. 
+[Method: POST, Route: admin/login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AdminController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\seteguk-senja\\public\\index.php')
+DEBUG - 2025-07-14 14:25:38 --> ✅ Database config loaded: localhost
+DEBUG - 2025-07-14 14:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 14:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 14:25:39 --> ✅ Database config loaded: localhost
+DEBUG - 2025-07-14 14:26:01 --> ✅ Database config loaded: localhost
+ERROR - 2025-07-14 14:26:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 14:26:03 --> 220 smtp.gmail.com ESMTP d9443c01a7336-23de4341ff6sm95538995ad.176 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:8922:e95a:91d3:a51d]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de4341ff6sm95538995ad.176 - gsmtp
+
+ERROR - 2025-07-14 14:26:03 --> ❌ Gagal mengirim email: 220 smtp.gmail.com ESMTP d9443c01a7336-23de4341ff6sm95538995ad.176 - gsmtp
+<br><pre>hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:8922:e95a:91d3:a51d]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+</pre>Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23de4341ff6sm95538995ad.176 - gsmtp
+<br>Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Mon, 14 Jul 2025 14:26:01 +0000
+To: valinapuspitasari538@gmail.com
+Cc: admin@seteguksenja.com
+Subject: =?UTF-8?Q?Konfirmasi=20Pesanan=20#ORD-011=20=E2=80=93=20Seteguk=20Senja?=
+From: &quot;Seteguk Senja Coffee Shop&quot; &lt;seteguksenja@gmail.com&gt;
+Return-Path: &lt;seteguksenja@gmail.com&gt;
+Reply-To: &lt;seteguksenja@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: seteguksenja@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6875137978d096.29241742@gmail.com&gt;
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6875137978d1a7.56426028&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_6875137978d1a7.56426028
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Terima Kasih Telah Memesan di Seteguk Senja!
+Nomor Pesanan: ORD-011
+Menu: coklat
+Ukuran: small
+Jumlah: 2
+Harga Satuan: Rp24.000
+Total Harga: Rp48.000
+Deskripsi: Coklat Hangat Cahaya Senja – Peluk manis saat petang tiba.
+Catatan: -
+Pembayaran: Qris
+
+📍 Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran
+sesuai metode yang dipilih.
+
+
+--B_ALT_6875137978d1a7.56426028
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+&lt;!-- DEBUG-VIEW START 1 APPPATH\Views\order\email_template.php --&gt;=0A&lt;h2&gt;Te=
+rima Kasih Telah Memesan di Seteguk Senja!&lt;/h2&gt;=0A&lt;p&gt;&lt;strong&gt;Nomor Pesanan:=
+&lt;/strong&gt; ORD-011&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Menu:&lt;/strong&gt; coklat&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;U=
+kuran:&lt;/strong&gt; small&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Jumlah:&lt;/strong&gt; 2&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;=
+Harga Satuan:&lt;/strong&gt; Rp24.000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Total Harga:&lt;/strong&gt; Rp48=
+.000&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Deskripsi:&lt;/strong&gt; Coklat Hangat Cahaya Senja =
+=E2=80=93 Peluk manis saat petang tiba.&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Catatan:&lt;/strong&gt; =
+-&lt;/p&gt;=0A&lt;p&gt;&lt;strong&gt;Pembayaran:&lt;/strong&gt; Qris&lt;/p&gt;=0A&lt;hr&gt;=0A&lt;p&gt;=F0=9F=93=
+=8D Silakan ambil pesanan Anda di kedai kami atau ikuti petunjuk pembayaran=
+ sesuai metode yang dipilih.&lt;/p&gt;=0A=0A&lt;!-- DEBUG-VIEW ENDED 1 APPPATH\Views=
+\order\email_template.php --&gt;
+
+--B_ALT_6875137978d1a7.56426028--</pre>
+DEBUG - 2025-07-14 14:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-14 14:26:07 --> ✅ Database config loaded: localhost
+DEBUG - 2025-07-14 14:26:12 --> ✅ Database config loaded: localhost
+ERROR - 2025-07-14 14:26:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-07-14 14:26:14 --> 220 smtp.gmail.com ESMTP d2e1a72fcca58-74eb9f1b5aesm10960224b3a.92 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2407:0:3006:3422:8922:e95a:91d3:a51d]
+250-SIZE 36700160
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74eb9f1b5aesm10960224b3a.92 - gsmtp
+
+ERROR - 2025-07-14 14:26:14 --> Gagal mengirim email ke valinapuspitasari538@gmail.com
+DEBUG - 2025-07-14 14:26:24 --> ✅ Database config loaded: localhost

@@ -27,15 +27,15 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => '',
+        'username'     => 'root',
         'password'     => '',
-        'database'     => '',
+        'database'     => 'seteguk_senja',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
-        'DBDebug'      => true,
-        'charset'      => 'utf8mb4',
-        'DBCollat'     => 'utf8mb4_general_ci',
+        'DBDebug'      => (ENVIRONMENT !== 'production'),
+        'charset'      => 'utf8',
+        'DBCollat'     => 'utf8_general_ci',
         'swapPre'      => '',
         'encrypt'      => false,
         'compress'     => false,
@@ -164,7 +164,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
+        'hostname'    => 'localhost',
         'username'    => '',
         'password'    => '',
         'database'    => ':memory:',
@@ -190,14 +190,15 @@ class Database extends Config
     ];
 
     public function __construct()
-    {
-        parent::__construct();
+{
+    parent::__construct();
 
-        // Ensure that we always set the database group to 'tests' if
-        // we are currently running an automated test suite, so that
-        // we don't overwrite live data on accident.
-        if (ENVIRONMENT === 'testing') {
-            $this->defaultGroup = 'tests';
-        }
+    if (ENVIRONMENT === 'development') {
+        log_message('debug', '✅ Database config loaded: ' . $this->default['hostname']);
     }
+
+    if (ENVIRONMENT === 'testing') {
+        $this->defaultGroup = 'tests';
+    }
+}
 }
